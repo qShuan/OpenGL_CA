@@ -15,9 +15,15 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
+#include "Sand.h"
+#include "Empty.h"
+#include <memory>
+#include <array>
+#include "Fps.h"
+
 #define TILE_SIZE 4
-#define SCREEN_WIDTH 1280
-#define SCREEN_HEIGHT 720
+#define SCREEN_WIDTH 1600
+#define SCREEN_HEIGHT 900
 
 float randomFloat()
 {
@@ -139,6 +145,7 @@ void ChangeQuadColor(int index, float* colors, color_t& color, ShaderStorageBuff
     colors[index * 4 + 2] = color.b; //b
     colors[index * 4 + 3] = color.a; //a
 
+
     ssbo->UpdateColors(index, 4 * sizeof(float), colors);
 }
 
@@ -198,6 +205,20 @@ int main(void) {
     //Print OpenGL version
     std::cout << "Version: " << glGetString(GL_VERSION) << std::endl;
     {
+
+        FPS fps;
+
+        Cell* cells[4];
+        cells[0] = new Sand();
+        cells[1] = new Empty();
+
+        Cell* temp = cells[0];
+        cells[0] = cells[1];
+        cells[1] = temp;
+
+        std::cout << cells[1]->type << std::endl;
+        cells[1]->Update();
+        std::cout << cells[1]->type << std::endl;
 
         int* vertices = (int*)malloc(sizeof(int) * (width + 1) * (height + 1) * 2);
 
@@ -299,6 +320,16 @@ int main(void) {
             /* Render here */
             glClear(GL_COLOR_BUFFER_BIT);
 
+            //Display FPS
+            fps.update();
+
+            int fps_num = fps.getFPS();
+
+            auto s_fps = std::to_string(fps_num);
+
+            glfwSetWindowTitle(window, s_fps.c_str());
+
+            //Update
             int state = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT);
             if (state == GLFW_PRESS)
             {
@@ -309,7 +340,7 @@ int main(void) {
                 int x = (int)xpos / TILE_SIZE;
                 int y = (int)ypos / TILE_SIZE;
 
-                std::cout << "Cursor Position at (" << x << " : " << y << ")" << std::endl;
+                //std::cout << "Cursor Position at (" << x << " : " << y << ")" << std::endl;
 
                 int index = (width)*y + x;
                 //ChangeQuadColor(index, colors, mat_col_sand);
