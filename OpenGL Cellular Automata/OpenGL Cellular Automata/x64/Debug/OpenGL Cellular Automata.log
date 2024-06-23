@@ -1,3 +1,5 @@
-﻿  main.cpp
-D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\main.cpp(174,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+﻿  Sandbox.cpp
+  main.cpp
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\main.cpp(59,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  Generowanie kodu...
   OpenGL Cellular Automata.vcxproj -> D:\Dominik\MyRepos\OpenGL Cellular Automata\x64\Debug\OpenGL Cellular Automata.exe
