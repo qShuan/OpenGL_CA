@@ -1,5 +1,52 @@
 ﻿  Sandbox.cpp
-  main.cpp
-D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\main.cpp(59,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
-  Generowanie kodu...
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(290,41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(347,26): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(348,26): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(349,26): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(360,31): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(361,31): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(362,31): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(366,28): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(367,28): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(368,28): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(577,56): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(580,56): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(583,56): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\Dominik\MyRepos\OpenGL Cellular Automata\OpenGL Cellular Automata\Sandbox.cpp(586,56): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
   OpenGL Cellular Automata.vcxproj -> D:\Dominik\MyRepos\OpenGL Cellular Automata\x64\Debug\OpenGL Cellular Automata.exe

@@ -37,6 +37,9 @@ void CheckCellType(GLFWwindow* window, Sandbox& sandbox) {
     if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
         sandbox.currentType = EMPTY;
     }
+    else if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS) {
+        sandbox.FillScreen();
+    }
     else if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS) {
         sandbox.currentType = SAND;
     }
@@ -51,6 +54,9 @@ void CheckCellType(GLFWwindow* window, Sandbox& sandbox) {
     }
     else if (glfwGetKey(window, GLFW_KEY_5) == GLFW_PRESS) {
         sandbox.currentType = LAVA;
+    }
+    else if (glfwGetKey(window, GLFW_KEY_6) == GLFW_PRESS) {
+        sandbox.currentType = FIRE;
     }
 }
 
@@ -106,9 +112,6 @@ int main(void) {
         shader.Bind();
 
         GLCall(glUniformMatrix4fv(shader.uMVPlocation, 1, GL_FALSE, &projMat[0][0]));
-        
-        //GLCall(glUniformMatrix4fv(shader.uMVPlocation, 1, GL_FALSE, &projMat[0][0]));
-
         
         GLCall(glBindVertexArray(0));
         shader.Unbind();
@@ -166,10 +169,7 @@ int main(void) {
                     int x = (int)xpos / TILE_SIZE;
                     int y = (int)ypos / TILE_SIZE;
 
-                    //std::cout << "Cursor Position at (" << x << " : " << y << ")" << std::endl;
-
                     int index = (sandbox.width) * y + x;
-                    //ChangeQuadColor(index, colors, mat_col_sand);
 
                     sandbox.DrawCircle(x, y, 5);
                 }

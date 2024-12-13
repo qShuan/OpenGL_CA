@@ -99,6 +99,29 @@ cell_t cell_lava() {
 	return p;
 }
 
+cell_t cell_fire() {
+
+	cell_t p = { FIRE };
+
+	p.color = RandomizeColor(fire_col);
+	p.temperature = randomBetween(900.f, 1000.f);
+
+	p.life = randomBetween(15.f, 30.f);
+
+	return p;
+}
+cell_t cell_smoke() {
+
+	cell_t p = { SMOKE };
+
+	p.color = RandomizeColor(smoke_col);
+	p.temperature = randomBetween(26.f, 38.f);
+
+	p.life = randomBetween(15.f, 30.f);
+
+	return p;
+}
+
 cell_t cell_current(Element& type) {
 
 	switch (type) {
@@ -117,6 +140,10 @@ cell_t cell_current(Element& type) {
 		return cell_stone();
 	case LAVA:
 		return cell_lava();
+	case FIRE:
+		return cell_fire();
+	case SMOKE:
+		return cell_smoke();
 	}
 
 	return cell_empty();

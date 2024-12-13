@@ -25,7 +25,6 @@ typedef struct cell_t {
 float RandomFloat(float min, float max);
 color_t RandomizeColor(color_t color);
 
-
 cell_t cell_empty();
 cell_t cell_border();
 cell_t cell_sand();

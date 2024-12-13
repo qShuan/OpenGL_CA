@@ -85,5 +85,8 @@
     <None Include="VertFrag.shader">
       <Filter>Pliki zasobów</Filter>
     </None>
+    <None Include="Simulation.shader">
+      <Filter>Pliki zasobów</Filter>
+    </None>
   </ItemGroup>
 </Project>
